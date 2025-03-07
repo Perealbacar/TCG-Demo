@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a19f63dc447305b4aad39ee9e4298c77, type: 3}
-  m_Name: Wasp_Common 2
+  m_Name: Lizard_Common
   m_EditorClassIdentifier: 
-  cardName: Wasp
+  cardName: Lizard
   cardRarity: 0
   health: 1
   damage: 1
+  cardSprite: {fileID: 21300000, guid: 3aff59010f0e9f743b2ef51757dfa00e, type: 3}

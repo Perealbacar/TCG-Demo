@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a19f63dc447305b4aad39ee9e4298c77, type: 3}
-  m_Name: Wasp_Common
+  m_Name: Crocodile_Epic
   m_EditorClassIdentifier: 
-  cardName: Wasp
+  cardName: Crocodile
   cardRarity: 0
-  health: 1
-  damage: 1
+  health: 3
+  damage: 2
+  cardSprite: {fileID: 21300000, guid: 2c6055fe165efcf419915de0edaaef67, type: 3}
