@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TCGLogic;
+using UnityEngine.XR;
 
 public class DeckManager : MonoBehaviour
 {
@@ -18,12 +19,20 @@ public class DeckManager : MonoBehaviour
     public Card epicCard;
     public Card legendCard;
 
+    public HandManager playerHand;
+    public HandManager enemyHand;
+
     public void Start()
     {
         PopulateDeck();
 
-        HandManager hand = FindObjectOfType<HandManager>();
-        for(int i = 0; i < 6; i++)
+        InitializeHand(enemyHand);
+        InitializeHand(playerHand);
+    }
+
+    public void InitializeHand(HandManager hand)
+    {
+        for (int i = 0; i < 6; i++)
         {
             DrawCard(hand);
         }

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Crocodile
   cardRarity: 0
-  health: 3
+  health: 2
   damage: 2
   cardSprite: {fileID: 21300000, guid: 2c6055fe165efcf419915de0edaaef67, type: 3}

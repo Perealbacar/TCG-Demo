@@ -11,8 +11,11 @@ public class HandManager : MonoBehaviour
     public Transform handTransform;
     public float cardRotation = 7.5f;
     public float cardSpacing = 100f;
+    public float verticalSpacing = 100f;
+    public int maxHandSize = 6;
     public List<GameObject> cardsInHand = new List<GameObject>();// List of the card objects in our hand.
-    public int handSize = 6;
+    public BoardManager boardManager;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +24,7 @@ public class HandManager : MonoBehaviour
 
     private void InitializeHand()
     {
-        for (int i = 0; i < handSize; i++) 
+        for (int i = 0; i < maxHandSize; i++) 
         {
             //AddCardToHand();
         }
@@ -29,6 +32,8 @@ public class HandManager : MonoBehaviour
     }
     public void AddCardToHand(Card cardData)
     {
+        if(cardsInHand.Count < maxHandSize)
+        {        
         //Instantiate card
 
         GameObject newCard = Instantiate(cardPrefab, handTransform.position, Quaternion.identity, handTransform);
@@ -36,7 +41,16 @@ public class HandManager : MonoBehaviour
 
         // Set the CardData of the instantiated card
         newCard.GetComponent<CardVisuals>().cardData = cardData;
+            CardMovement cardMovement = newCard.GetComponent<CardMovement>();
+            cardMovement.handManager = this;
         
+        }
+        UpdateHandVisuals();
+    }
+
+    public void RemoveCard(GameObject gameObject)
+    {
+        cardsInHand.Remove(gameObject);
         UpdateHandVisuals();
     }
 

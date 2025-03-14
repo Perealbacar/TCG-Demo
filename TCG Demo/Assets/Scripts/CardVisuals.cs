@@ -13,12 +13,16 @@ public class CardVisuals : MonoBehaviour
     public Image cardImage;
     public TMP_Text nameText;
     public TMP_Text healthText;
+    public int health;
+    public int damage;
     public TMP_Text damageText;
     public TMP_Text rarityText;
     
     // Start is called before the first frame update
     void Start()
     {
+        health = cardData.health;
+        damage = cardData.damage;
         UpdateCardDisplay();
     }
 
@@ -26,8 +30,8 @@ public class CardVisuals : MonoBehaviour
     {
         nameText.text = cardData.cardName;
         cardImage.sprite = cardData.cardSprite;
-        healthText.text = cardData.health.ToString();
-        damageText.text = cardData.damage.ToString();
+        healthText.text = health.ToString();
+        damageText.text = damage.ToString();
         rarityText.text = cardData.cardRarity.ToString();
 
     }

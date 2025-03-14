@@ -32,7 +32,7 @@ public class DragUIObject : MonoBehaviour, IDragHandler, IPointerDownHandler
             rectTransform.localPosition = originalPanelLocalPosition + offsetToOriginal;
 
             // Debug output
-            Debug.Log($"Drag - LocalPointerPosition: {localPointerPosition}, Offset: {offsetToOriginal}, New Position: {rectTransform.localPosition}");
+            //Debug.Log($"Drag - LocalPointerPosition: {localPointerPosition}, Offset: {offsetToOriginal}, New Position: {rectTransform.localPosition}");
         }
     }
 }
