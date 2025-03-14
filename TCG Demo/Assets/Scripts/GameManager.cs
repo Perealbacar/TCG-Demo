@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour
 
                 targetComponent.health -= cardComponent.cardData.damage;
                 Debug.Log("Card attacked: " + targetComponent.health + " health left");
+                targetComponent.UpdateCardDisplay();
 
                 if (targetComponent.health <= 0)
                 {
